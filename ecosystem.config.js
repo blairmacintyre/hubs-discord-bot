@@ -11,7 +11,7 @@ module.exports = {
         ref: 'origin/blairsworld-server',
         repo: 'git@github.com:blairmacintyre/hubs-discord-bot.git',
         path: '/home/ubuntu/hubs-discord-bot-and-server',
-        'post-deploy': 'npm install && pm2 startOrRestart ecosystem.config.js'
+        'post-deploy': 'npm install && cp blairsworld.env .env && pm2 startOrRestart ecosystem.config.js'
       }
     }
   }
