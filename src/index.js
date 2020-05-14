@@ -7,7 +7,7 @@ const https = require('https');
 const express = require('express');
 const app = express()
 
-const targetBaseUrl = 'http://hubs.ieeevr.online';
+const targetBaseUrl = 'http://hubs.blairsworld.net';
 
 // this handles our Lets Encrypt https cert challenge.
 app.get('/.well-known/acme-challenge/JHnAuCvd_KzlHnM96PBgKLfxKqo6l1Ki5hyKI9OsH3k', (req,res) => {
@@ -34,9 +34,9 @@ const httpServer = http.createServer(app);
 httpServer.listen(3000, () => console.log('HTTP Server running on port 3000'))
 
 /////////
-const privKeyFileName = '/etc/letsencrypt/live/ieeevr.online/privkey.pem'
-const certFileName = '/etc/letsencrypt/live/ieeevr.online/cert.pem'
-const chainFileName = '/etc/letsencrypt/live/ieeevr.online/chain.pem'
+const privKeyFileName = '/etc/letsencrypt/live/blairsworld.net/privkey.pem'
+const certFileName = '/etc/letsencrypt/live/blairsworld.net/cert.pem'
+const chainFileName = '/etc/letsencrypt/live/blairsworld.net/chain.pem'
 
 if (fs.existsSync(privKeyFileName) && fs.existsSync(certFileName) && fs.existsSync(chainFileName)) {
   const privateKey = fs.readFileSync(privKeyFileName, 'utf8');
