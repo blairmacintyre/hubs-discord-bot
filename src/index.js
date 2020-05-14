@@ -10,8 +10,8 @@ const app = express()
 const targetBaseUrl = 'http://hubs.ieeevr.online';
 
 // this handles our Lets Encrypt https cert challenge.
-app.get('/.well-known/acme-challenge/AFXirU3FJ2twGUkPJLt-AZ2IdouvcAQU0peSIvegJtI', (req,res) => {
-  res.send("AFXirU3FJ2twGUkPJLt-AZ2IdouvcAQU0peSIvegJtI.5st7B8fZLpP9RAISxL2Qyv1F-LUAzk_ernUbaqXPriM")
+app.get('/.well-known/acme-challenge/i9xAXYISjWRG6IAdKqYhmNTef8_tESKw8CLKJoKLL24', (req,res) => {
+  res.send("i9xAXYISjWRG6IAdKqYhmNTef8_tESKw8CLKJoKLL24.ZHzTvOsl_f2vH3GTKeCDGBSs6tNJ1Gx0za87uxz9_w0")
 })
 
 
