@@ -17,17 +17,17 @@ app.get('/.well-known/acme-challenge/i9xAXYISjWRG6IAdKqYhmNTef8_tESKw8CLKJoKLL24
 
 // This method and the top level redirect are temporary.  We'll get rid of them
 // when we have a proper top level server
-function handleRedirect(req, res) {
-  console.log(req.originalUrl);
-  const targetUrl = targetBaseUrl + req.originalUrl;
-  res.redirect(targetUrl);
-}
-app.get('/', handleRedirect);
+// function handleRedirect(req, res) {
+//   console.log(req.originalUrl);
+//   const targetUrl = targetBaseUrl + req.originalUrl;
+//   res.redirect(targetUrl);
+// }
+// app.get('/', handleRedirect);
 
 // to try out static files, uncomment this (and comment out the redirect above) 
 // and put your files in a new directory "public" that you create at the top level of the repo
 
-// app.use(express.static('public'))
+app.use(express.static('public'))
 
 // Starting both http & https servers
 const httpServer = http.createServer(app);
